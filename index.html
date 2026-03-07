@@ -1,202 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nikhil Deepak Patel — Web Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Developer & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise"></div>
-
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-outer" id="cursorOuter"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-text">
-      <span>N</span><span>D</span><span>P</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
-  </div>
-
   <!-- NAV -->
-  <nav id="nav">
-    <a href="#" class="nav-logo">NDP<span>©</span></a>
-    <div class="nav-links">
-      <a href="#about" class="nav-link" data-text="About">About</a>
-      <a href="#work" class="nav-link" data-text="Work">Work</a>
-      <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
-    </div>
-    <a href="mailto:nikhil@example.com" class="nav-cta">Hire Me</a>
+  <header id="nav">
+
+  <nav class="nav-center">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-left">
-      <div class="hero-tag reveal">
-        <span class="dot-live"></span> Available for work
-      </div>
-      <h1 class="hero-title">
-        <span class="line-wrap"><span class="reveal-line">Nikhil</span></span>
-        <span class="line-wrap"><span class="reveal-line">Deepak</span></span>
-        <span class="line-wrap"><span class="reveal-line">Patel</span></span>
-      </h1>
-    </div>
-    <div class="hero-right">
-      <p class="hero-desc reveal-fade">Aspiring web developer on a mission to craft beautiful, purposeful experiences on the web.</p>
-      <div class="hero-meta reveal-fade">
-        <div class="meta-item">
-          <span class="meta-num" data-count="1">0</span>
-          <span class="meta-label">Project live</span>
-        </div>
-        <div class="meta-divider"></div>
-        <div class="meta-item">
-          <span class="meta-num" data-count="100">0</span>
-          <span class="meta-label">% Commitment</span>
-        </div>
-        <div class="meta-divider"></div>
-        <div class="meta-item">
-          <span class="meta-num" data-count="2025">0</span>
-          <span class="meta-label">Year started</span>
-        </div>
-      </div>
-      <a href="#work" class="hero-btn reveal-fade">
-        <span>Explore My Work</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span>scroll</span>
-    </div>
-  </section>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
 
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <span>HTML</span><span class="sep">✦</span>
-      <span>CSS</span><span class="sep">✦</span>
-      <span>JavaScript</span><span class="sep">✦</span>
-      <span>Responsive Design</span><span class="sep">✦</span>
-      <span>Git & GitHub</span><span class="sep">✦</span>
-      <span>VS Code</span><span class="sep">✦</span>
-      <span>Web Development</span><span class="sep">✦</span>
-      <span>HTML</span><span class="sep">✦</span>
-      <span>CSS</span><span class="sep">✦</span>
-      <span>JavaScript</span><span class="sep">✦</span>
-      <span>Responsive Design</span><span class="sep">✦</span>
-      <span>Git & GitHub</span><span class="sep">✦</span>
-      <span>VS Code</span><span class="sep">✦</span>
-      <span>Web Development</span><span class="sep">✦</span>
-    </div>
+</header>
+
+  <div class="mob-nav" id="mob-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
   </div>
 
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-top">
+      <span class="hero-tag">FullStack Developer</span>
+      <span class="hero-tag hero-tag--right">Available for work</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line">Nikhil</span>
+      <span class="line accent">Patel</span>
+    </h1>
+
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        I build fast, beautiful digital products.<br>
+        Code that works. Design that converts.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">See My Work</a>
+        <a href="#contact" class="btn-outline">Hire Me</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-n" id="c1">0</span>
+        <span class="stat-l">Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-n" id="c2">0</span>
+        <span class="stat-l">Clients</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-n" id="c3">0</span>
+        <span class="stat-l">Years Exp</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-header">
-      <span class="section-index">01</span>
-      <span class="section-label">About</span>
-    </div>
-    <div class="about-body">
-      <div class="about-text">
-        <h2 class="section-title reveal-title">The story so<br/><em>far.</em></h2>
-        <p class="about-para reveal-fade">I'm <strong>Nikhil Deepak Patel</strong> — a passionate beginner with a clear vision. I believe that confidence in web development comes from building, failing, learning, and building again.</p>
-        <p class="about-para reveal-fade">Every line of code I write brings me one step closer to mastery. This portfolio is chapter one of a story that's just getting started.</p>
-      </div>
-      <div class="about-skills reveal-fade">
-        <div class="skill-row">
-          <span class="skill-name">HTML5</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-          <span class="skill-pct">Learning</span>
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-heading reveal">
+          <h2 class="big-heading">I BUILD<br><span class="accent">THINGS</span><br>THAT WORK.</h2>
         </div>
-        <div class="skill-row">
-          <span class="skill-name">CSS3</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-          <span class="skill-pct">Learning</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">JavaScript</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-          <span class="skill-pct">Growing</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Git & GitHub</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
-          <span class="skill-pct">Growing</span>
+        <div class="about-body reveal">
+          <p>
+            I'm a developer and designer who obsesses over the details that most people skip.
+            Clean code, sharp interfaces, products that perform as good as they look.
+          </p>
+          <p>
+            I work across the full stack — from polished frontend experiences to
+            rock-solid backends. Every project I take on gets my full attention.
+          </p>
+          <div class="tags">
+            <span>React</span><span>TypeScript</span><span>Node.js</span>
+            <span>Figma</span><span>Next.js</span><span>PostgreSQL</span>
+            <span>Three.js</span><span>AWS</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="work" id="work">
-    <div class="work-header">
-      <span class="section-index">02</span>
-      <span class="section-label">Work</span>
-      <h2 class="section-title reveal-title">Selected<br/><em>projects.</em></h2>
-    </div>
+  <!-- SKILLS -->
+  <section id="skills" class="section section--alt">
+    <div class="wrap">
+      <div class="sec-label reveal">02 — Skills</div>
+      <h2 class="section-title reveal">WHAT I DO?</h2>
 
-    <div class="project-item reveal-fade" data-index="01">
-      <div class="project-info">
-        <h3>Personal Portfolio</h3>
-        <p>My first real project — a fully hand-coded portfolio to showcase my journey and skills as a developer.</p>
-        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-      </div>
-      <div class="project-badge">Live ✦</div>
-      <a href="#" class="project-link">
-        View Project
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
+      <div class="skills-grid">
 
-    <div class="project-item reveal-fade coming" data-index="02">
-      <div class="project-info">
-        <h3>Next Project</h3>
-        <p>In progress — something exciting is being built. Stay tuned for the reveal.</p>
-        <div class="project-tags"><span>Coming Soon</span></div>
-      </div>
-      <div class="project-badge muted">Soon</div>
-    </div>
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <span class="skill-name">Frontend Dev</span>
+            <span class="skill-pct" data-pct="92">0%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" data-pct="92"></div></div>
+          <p class="skill-desc">React, Next.js, TypeScript. Interfaces that are fast, sharp, and accessible.</p>
+        </div>
 
-    <div class="project-item reveal-fade coming" data-index="03">
-      <div class="project-info">
-        <h3>Untitled Project</h3>
-        <p>The best is yet to come. Every day of learning leads to something great.</p>
-        <div class="project-tags"><span>Coming Soon</span></div>
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <span class="skill-name">UI / UX Design</span>
+            <span class="skill-pct" data-pct="88">88%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" data-pct="88"></div></div>
+          <p class="skill-desc">Figma, design systems, prototyping. Interfaces people actually enjoy using.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <span class="skill-name">Backend Dev</span>
+            <span class="skill-pct" data-pct="80">0%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" data-pct="80"></div></div>
+          <p class="skill-desc">Node.js, Python, REST & GraphQL. Systems built to scale without breaking.</p>
+        </div>
+
+       
+
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <span class="skill-name">Cloud / DevOps</span>
+            <span class="skill-pct" data-pct="75">0%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" data-pct="75"></div></div>
+          <p class="skill-desc">AWS, Docker, CI/CD. Deploying and scaling apps with modern tooling.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-head">
+            <span class="skill-name">AI Integration</span>
+            <span class="skill-pct" data-pct="78">0%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+          <p class="skill-desc">LLM APIs, automation, computer vision. Products powered by real AI.</p>
+        </div>
+
       </div>
-      <div class="project-badge muted">Soon</div>
     </div>
   </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">03 — Work</div>
+      <h2 class="section-title reveal">SELECTED PROJECTS</h2>
+
+      <div class="proj-list">
+
+        <a href="#" class="proj-item reveal">
+          <div class="proj-left">
+            <span class="proj-num">01</span>
+            <div>
+              <h3 class="proj-name">PORTFOLIO</h3>
+              <p class="proj-sub">MY PERSONAL PORTFOLIO</p>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </a>
+
+        <a href="#" class="proj-item reveal">
+          <div class="proj-left">
+            <span class="proj-num">02</span>
+            <div>
+              <h3 class="proj-name">COMING SOON</h3>
+              <p class="proj-sub">COMING SOON</p>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>COMINGSOON</span><span>COMINGSOON</span><span>COMINGSOON</span>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </a>
+
+        <a href="#" class="proj-item reveal">
+          <div class="proj-left">
+            <span class="proj-num">03</span>
+            <div>
+              <h3 class="proj-name">COMING SOON</h3>
+              <p class="proj-sub">COMINGSOON</p>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>COMINGSOON</span><span>COMINGSOON</span><span>COMINGSOON</span>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </a>
+
+   
+
+
+      </div>
+    </div>
+  </section>
+
+  
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <span class="section-index">03</span>
-      <h2 class="contact-title reveal-title">Let's build<br/><em>something.</em></h2>
-      <p class="contact-sub reveal-fade">Open to collaborations, internships, and new connections in the world of web development.</p>
-      <a href="mailto:nikhil@example.com" class="contact-btn reveal-fade">
-        <span>Say Hello</span>
-        <div class="btn-circle">→</div>
-      </a>
-      <div class="contact-links reveal-fade">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <span>·</span>
-        <a href="mailto:nikhil@example.com">Email</a>
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="sec-label reveal">05 — Contact</div>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="big-heading">LET'S<br><span class="accent">WORK</span><br>TOGETHER.</h2>
+          <div class="contact-links">
+            <a href="mailto:hello@yourname.dev">hello@yourname.dev</a>
+            <a href="https://github.com/yourname" target="_blank">github.com/yourname</a>
+            <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="Project inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Send Message</span>
+          </button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Nikhil Deepak Patel</span>
-    <span class="footer-mid">Designed & Built with ♥</span>
-    <span>Keep building 🚀</span>
+    <div class="wrap footer-inner">
+      <a href="#hero" class="logo">YN<span>.</span></a>
+      <p>© 2025 Your Name. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank">GH</a>
+        <a href="https://linkedin.com/in/yourname" target="_blank">LI</a>
+        <a href="https://x.com/yourhandle" target="_blank">𝕏</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
